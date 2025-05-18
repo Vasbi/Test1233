@@ -1,0 +1,35 @@
+export declare class CreateCriticalDateDto {
+    title: string;
+    status: string;
+    entity?: string;
+    department?: string;
+    state?: string;
+    contractValue?: number;
+    criticalIssue?: string;
+    criticalIssueDescription?: string;
+    reminderType?: string;
+    projectName?: string;
+    projectAddress?: string;
+    agreementType?: string;
+    agreementDate?: Date;
+    agreementReference?: string;
+    dueDate: Date;
+    reminderScheduling?: string;
+    occurrenceFrequency?: string;
+    occurrenceStartDate?: Date;
+    occurrenceLastNotificationDate?: Date;
+    reminder1Days?: number;
+    reminder2Days?: number;
+    reminder3Days?: number;
+    reminder4Days?: number;
+    postTriggerDateReminderDays?: number;
+    hasRelatedClause?: boolean;
+    relatedClauseAndContractDetails?: string;
+    relatedClauseAction?: string;
+    relatedAgreementType?: string;
+    relatedAgreementDate?: Date;
+    blueCHPResponsiblePerson?: string;
+    blueCHPManager?: string;
+    externalResponsiblePartyEmail?: string;
+    emails?: string[];
+}

@@ -1,0 +1,52 @@
+# Remove references to server/ in documentation
+
+# Migration & Modernization Summary
+
+## 1. Architecture & Structure
+- Migrated to a **feature-based folder structure** for all major app domains (Risks, Issues, Critical Dates, etc.).
+- All Risk-related components, hooks, and logic are now in risks and exported via a single index.ts for modularity and maintainability.
+- Legacy components in components have been removed after verifying all functionality was migrated.
+
+## 2. UI Modernization
+- **Syncfusion** is now the core UI framework.
+- A starter `SyncfusionRiskTable.tsx` using Syncfusion DataGrid is in place, ready for further customization.
+- Plan to migrate all tables, forms, and modals to Syncfusion equivalents for a unified UX.
+
+## 3. State & Data
+- Hooks like `useRisks` and `useIssues` are modularized and exported from their respective feature folders.
+- Centralized API client and state management planned for further scalability.
+
+## 4. Backend & Shared Types
+- Plan to migrate backend to **NestJS** for modular, scalable APIs with TypeScript and OpenAPI support.
+- Shared types and validation schemas (e.g., Zod) to be used across client and server.
+
+## 5. Next Steps
+- Continue Syncfusion UI integration for all features.
+- Modularize and migrate any remaining legacy code (if any).
+- Update all imports throughout the app to use feature-based paths.
+- Proceed with backend modernization and shared type integration.
+
+---
+
+## Risk Feature Index Example:
+
+```typescript
+export { default as SyncfusionRiskTable } from './SyncfusionRiskTable';
+export { default as RiskTable } from './RiskTable';
+export { default as AddRiskModal } from './AddRiskModal';
+export { default as EditRiskModal } from './EditRiskModal';
+export { default as DeleteConfirmDialog } from './DeleteConfirmDialog';
+export { default as DynamicRiskModal } from './DynamicRiskModal';
+export { default as RiskDashboard } from './RiskDashboard';
+export { default as RiskFilter } from './RiskFilter';
+export * from './useRisks';
+export { default as useIssues } from './useIssues';
+// Add more exports as you migrate components
+```
+
+---
+
+## How to Continue:
+- Pick up from the modularized feature folders.
+- Continue Syncfusion UI migration and backend improvements.
+- Reference this summary for architectural context and next steps.
